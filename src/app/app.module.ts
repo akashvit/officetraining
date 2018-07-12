@@ -11,7 +11,7 @@ import { RoutingModule } from './routing/routing.module';
     HomeComponent
   ],
   imports: [
-    RoutingModule
+    RoutingModule,BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

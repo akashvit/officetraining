@@ -1,3 +1,16 @@
-<p>
-  home works!
-</p>
+<h1 style="text-align: center;">Store</h1>
+<br><br>
+
+<div *ngFor="let x of items">
+  {{x.id}}
+  {{x.price}}<br>
+  <input type="number" value="{{x.qty}}">
+  <!-- {{x.qty}} -->
+  
+  <input type="button" (click)='add(x)' value="{{x.text}}">
+
+  <br><br>
+  Product Total : {{productresult}}
+
+</div>
+
