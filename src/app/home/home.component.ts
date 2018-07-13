@@ -10,21 +10,24 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   items = [ {
-    id:"item1",
+    imagepath:'../assets/shirt1.jpg',
+    id:"Shirt-1",
     price:20,
     qty:0,
     text:"Add To Cart"
 },
 {
-  id:"item2",
+  imagepath:'../assets/shirt1.jpg',  
+  id:"Shirt-2",
   price:30,
-  qty:2,
+  qty:0,
   text:"Add To Cart"  
 },
 {
-  id:"item3",
+  imagepath:'../assets/shirt1.jpg',  
+  id:"Shirt-3",
   price:10,
-  qty:3,
+  qty:0,
   text:"Add To Cart"  
 }
 ];
@@ -36,11 +39,13 @@ add(y){
   {
 this.productresult = this.productresult + y.price * y.qty;
 y.text="Remove Cart";
+
   }
   else
   {
     this.productresult = this.productresult - y.price * y.qty;
 y.text="Add To Cart";
+y.qty=0;
 
   }
 

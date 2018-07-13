@@ -2,15 +2,17 @@
 <br><br>
 
 <div *ngFor="let x of items">
-  {{x.id}}
-  {{x.price}}<br>
-  <input type="number" value="{{x.qty}}">
+<!-- <img src='{{x.imagepath}}' alt=""><br>   -->
+  <a routerLink="home/datail/{{x.id}}">Name : {{x.id}}</a> <br>
+  Price : {{x.price}}<br>
+  <input type="number" [(ngModel)]="x.qty">
   <!-- {{x.qty}} -->
   
-  <input type="button" (click)='add(x)' value="{{x.text}}">
-
-  <br><br>
+  <input type="button" (click)='add(x)' value="{{x.text}}">  
+<br>
+<br>
+</div>
+<br><br>
   Product Total : {{productresult}}
 
-</div>
-
+  
